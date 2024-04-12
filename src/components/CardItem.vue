@@ -48,7 +48,7 @@
           @click="isDeleteCardDialogOpen = true" />
       </template>
     </v-tooltip>
-    <v-tooltip text="Сортировка по рейтингу">
+    <!-- <v-tooltip text="Сортировка по рейтингу">
       <template v-slot:activator="{ props }">
         <v-btn
           v-bind="props"
@@ -59,7 +59,7 @@
           color="blue"
           @click="sortList" />
       </template>
-    </v-tooltip>
+    </v-tooltip> -->
 
     <img :src="props.card.image" alt="изображение товара" />
     <div class="info">
@@ -163,10 +163,10 @@
     }
   }
 
-  function sortList() {
-    getLocalCards();
-    cards = cards.value.sort((a, b) => b.rating.rate - a.rating.rate);
-  }
+  // function sortList() {
+  //   getLocalCards();
+  //   cards = cards.value.sort((a, b) => b.rating.rate - a.rating.rate);
+  // }
 </script>
 
 <style lang="scss" scoped>

@@ -4,6 +4,8 @@
     @drop="onDrop($event, options.id)"
     @dragover.prevent
     @dragenter.prevent>
+    <ToolBar class="toolbar"     
+      :options="props.options" />
     <div class="title">
       <h2>
         {{ options.title }}
@@ -39,6 +41,7 @@
 
 <script setup>
   import { ref, inject } from 'vue';
+  import ToolBar from './ToolBar.vue';
   import CardItem from './CardItem.vue';
   import CardForm from './CardForm.vue';
 
@@ -141,6 +144,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;    
     .title {
       padding-bottom: 10px;
       width: 90%;
